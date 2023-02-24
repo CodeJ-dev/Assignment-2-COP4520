@@ -19,6 +19,6 @@ If the guest sees a cupcake he will ignore it and leave the labyrinth, else if t
 
 Thus when the leader finally eats the n cupcakes where n = number of guests. Then the leader will know everyone has been accounted for.  
 
-In my program I used a random number genarator to simulate the Minotaur having an equally likely chance of picking the guests. I first create all of my threads. Then I simulate the Minotaur picking a random guest if a thread tries to enter my method that simulates the maze without being chosen that thread is denied entry. Once the thread that is supposed to enter the maze enters it will simulate the strategy discussed above. Finally I pick a new random number to simulate the Minotaur picking a new guest. This keeps repeating until all of the guests are accounted for.
+In my program I used a random number genarator to simulate the Minotaur having an equally likely chance of picking the guests. I first create all of my threads. Then I simulate the Minotaur picking a random guest if a thread tries to enter my synchronized method that simulates the maze without being chosen that thread is denied entry. Once the thread chosen enters the maze it will simulate the strategy discussed above. Finally I pick a new random number to simulate the Minotaur picking a new guest. This keeps repeating until all of the guests are accounted for. To keep track if a guest has or has not put back the cupcake I have a ThreadLocal variable ThreadLocal<Boolean> putCupcakeBack that is local to each thread.
 
  
