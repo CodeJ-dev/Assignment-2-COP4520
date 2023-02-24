@@ -56,7 +56,7 @@ public class SeeVase {
 			guests[i] = new Thread(new Runnable() {
 				public void run() {
 					while (totalPeopleToSeeVase.get() < NUM_OF_THREADS) {
-						boolean doesGuestWantToSeeVase = true;//getRandomizedValue(4) == 1;
+						boolean doesGuestWantToSeeVase = getRandomizedValue(4) == 1;
 						if (doesGuestWantToSeeVase) {
 							queue.enqueue(id);
 							if (!hasGuestSeenVase.get()) {
